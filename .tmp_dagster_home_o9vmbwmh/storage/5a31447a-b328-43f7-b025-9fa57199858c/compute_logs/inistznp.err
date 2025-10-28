@@ -1,0 +1,26 @@
+[32m2025-10-28 22:07:06 +0100[0m - dagster - [34mDEBUG[0m - daily_etl_job - 5a31447a-b328-43f7-b025-9fa57199858c - 47762 - LOGS_CAPTURED - Started capturing logs in process (pid: 47762).
+[32m2025-10-28 22:07:06 +0100[0m - dagster - [34mDEBUG[0m - daily_etl_job - 5a31447a-b328-43f7-b025-9fa57199858c - 47762 - run_dbt - STEP_START - Started execution of step "run_dbt".
+/Users/mustafahassan/HR_analytics_cloud_deployment/venv/bin/python3.12: No module named dbt.__main__; 'dbt' is a package and cannot be directly executed
+[32m2025-10-28 22:07:06 +0100[0m - dagster - [34mERROR[0m - [31mdaily_etl_job - 5a31447a-b328-43f7-b025-9fa57199858c - 47762 - run_dbt - STEP_FAILURE - Execution of step "run_dbt" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "run_dbt"::
+
+subprocess.CalledProcessError: Command '['/Users/mustafahassan/HR_analytics_cloud_deployment/venv/bin/python3.12', '-m', 'dbt', 'run', '--project-dir', 'hr_analytics_dbt']' returned non-zero exit status 1.
+
+Stack Trace:
+  File "/Users/mustafahassan/HR_analytics_cloud_deployment/venv/lib/python3.12/site-packages/dagster/_core/execution/plan/utils.py", line 57, in op_execution_error_boundary
+    yield
+  File "/Users/mustafahassan/HR_analytics_cloud_deployment/venv/lib/python3.12/site-packages/dagster/_utils/__init__.py", line 392, in iterate_with_context
+    next_output = next(iterator)
+                  ^^^^^^^^^^^^^^
+  File "/Users/mustafahassan/HR_analytics_cloud_deployment/venv/lib/python3.12/site-packages/dagster/_core/execution/plan/compute_generator.py", line 137, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+             ^^^^^^^^^^^^^^^^^^
+  File "/Users/mustafahassan/HR_analytics_cloud_deployment/venv/lib/python3.12/site-packages/dagster/_core/execution/plan/compute_generator.py", line 117, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+                                                                    ^^^^^^^^^^^^^^^^^^
+  File "/Users/mustafahassan/HR_analytics_cloud_deployment/orchestration/ops/dbt_op.py", line 13, in run_dbt
+    subprocess.run([sys.executable, "-m", "dbt", "run", "--project-dir", "hr_analytics_dbt"], check=True, env=env)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+[0m
