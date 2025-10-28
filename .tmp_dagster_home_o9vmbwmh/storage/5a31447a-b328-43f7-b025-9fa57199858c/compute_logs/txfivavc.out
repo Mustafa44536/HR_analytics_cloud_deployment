@@ -1,0 +1,4 @@
+Pipeline jobsearch_duckdb load step completed in 0.50 seconds
+1 load package(s) were loaded to destination duckdb and into dataset raw
+The duckdb destination used duckdb:////Users/mustafahassan/HR_analytics_cloud_deployment/data/hr_warehouse.duckdb location to store data
+Load package 1761685627.3817852 is LOADED and contains no failed jobs

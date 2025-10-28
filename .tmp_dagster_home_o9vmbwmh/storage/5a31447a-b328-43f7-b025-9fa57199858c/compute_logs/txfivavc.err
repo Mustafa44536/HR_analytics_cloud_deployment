@@ -1,0 +1,6 @@
+[32m2025-10-28 22:07:06 +0100[0m - dagster - [34mDEBUG[0m - daily_etl_job - 5a31447a-b328-43f7-b025-9fa57199858c - 47763 - LOGS_CAPTURED - Started capturing logs in process (pid: 47763).
+[32m2025-10-28 22:07:06 +0100[0m - dagster - [34mDEBUG[0m - daily_etl_job - 5a31447a-b328-43f7-b025-9fa57199858c - 47763 - run_dlt - STEP_START - Started execution of step "run_dlt".
+[32m2025-10-28 22:07:30 +0100[0m - dagster - [34mDEBUG[0m - daily_etl_job - 5a31447a-b328-43f7-b025-9fa57199858c - 47763 - run_dlt - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2025-10-28 22:07:30 +0100[0m - dagster - [34mDEBUG[0m - daily_etl_job - 5a31447a-b328-43f7-b025-9fa57199858c - run_dlt - Writing file at: /Users/mustafahassan/HR_analytics_cloud_deployment/.tmp_dagster_home_o9vmbwmh/storage/5a31447a-b328-43f7-b025-9fa57199858c/run_dlt/result using PickledObjectFilesystemIOManager...
+[32m2025-10-28 22:07:30 +0100[0m - dagster - [34mDEBUG[0m - daily_etl_job - 5a31447a-b328-43f7-b025-9fa57199858c - 47763 - run_dlt - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2025-10-28 22:07:30 +0100[0m - dagster - [34mDEBUG[0m - daily_etl_job - 5a31447a-b328-43f7-b025-9fa57199858c - 47763 - run_dlt - STEP_SUCCESS - Finished execution of step "run_dlt" in 24.87s.
