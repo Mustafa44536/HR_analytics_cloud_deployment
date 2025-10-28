@@ -1,0 +1,9 @@
+hr_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      # Läs sökvägen från env-var DUCKDB_PATH (fallback: data/hr_warehouse.duckdb)
+      path: "{{ env_var('DUCKDB_PATH', 'data/hr_warehouse.duckdb') }}"
+      schema: analytics
+
